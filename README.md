@@ -9,7 +9,7 @@ CÁCH CÀI ĐẶT
   
 - Mở Photoshop: Window > Extensions > Typertool.
   
-- Gỡ cài đặt: uninstall_win.cmd (hoặc xóa thư mục Typertool trong folder Adobe/CEP/extensions).
+- Gỡ cài đặt: uninstall_win.cmd (hoặc xóa thư mục Typertool trong folder C:/Users/TenMay/AppData/Roaming/Adobe/CEP/extensions).
 
 -----
 
@@ -26,7 +26,17 @@ Chỉ cần select layer là nó sẽ tự đẻ những options đẹp nhất �
 
 ························
 
-2. Thêm kho Effect để tự gán vào layer
+2. Tự check TR trong lúc làm việc
+
+Tool sẽ tự scan xem có bị sai thoại gì lúc làm không.
+
+Lấy .json của TN lúc add type, còn .json của bọn KST thì có sẵn ở mục add text trên web rồi
+
+- Chú ý: Con KST bị ngu, code thoại trong PSD và Sfloz bị lệch tùm lum nên lúc được lúc không, đây là tính năng!
+
+························
+
+3. Thêm kho Effect để tự gán vào layer
 
 
 <img width="259" height="293" alt="image" src="https://github.com/user-attachments/assets/ecaa445a-8771-4dd4-8302-08ac044a2705" />
@@ -48,7 +58,7 @@ Tự test 3 nút để tự hiểu nó tạo mask như thế nào nếu quá kh�
 
 ························
 
-3. Copy style
+4. Copy style
 
 <img width="259" height="171" alt="image" src="https://github.com/user-attachments/assets/9d31f7f1-1859-4989-8768-e9be5e823e39" />
 
