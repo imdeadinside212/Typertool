@@ -5,7 +5,7 @@ CÁCH CÀI ĐẶT
 
 - Windows: Giải nén rồi chạy install_win.cmd (nhớ phải tắt photoshop trước, nếu bị lỗi linebreak thì install lại bằng run with administrator).
   
-- macOS:  Giải nén rồi chạy install_mac.command.
+- macOS:  Giải nén rồi chạy install_mac.command (Chưa tét nên ko biết có lỗi j ko, có lỗi thì ae báo tôi phát).
   
 - Mở Photoshop: Window > Extensions > Typertool.
   
@@ -21,16 +21,21 @@ CHỨC NĂNG
 
 
 
-Chỉ cần select layer là nó sẽ tự đẻ những options đẹp nhất ở nút đầu tiên, nếu không muốn thì chọn sang các phần khác để thêm nhiều options
+Chỉ cần select layer là nó sẽ tự đẻ những options ở nút đầu tiên, nếu không muốn thì chọn sang các phần khác để thêm nhiều options
 [Có thể tự gán phím tắt]
 
 ························
 
 2. Tự check TR trong lúc làm việc
 
-Tool sẽ tự scan xem có bị sai thoại gì lúc làm không.
 
-Lấy .json của TN lúc add type, còn .json của bọn KST thì có sẵn ở mục add text trên web rồi
+<img width="259" height="203" alt="image" src="https://github.com/user-attachments/assets/f3708c2e-5eb6-44ab-b884-6cc5f7733e35" />
+
+
+
+Tool sẽ tự scan xem có bị sai thoại gì lúc làm không. Có thể check lỗi text hoặc những text có trong file để có thể xem thoại nào giữ / thoại nào đã xóa
+
+Lấy '.json' của TN lúc add type, còn '.json' của bọn KST thì có sẵn ở mục add text trên sfloz rồi
 
 - Chú ý: Con KST bị ngu, code thoại trong PSD và Sfloz bị lệch tùm lum nên lúc được lúc không, đây là tính năng!
 
@@ -67,4 +72,10 @@ Copy 1 hoặc nhiều layer theo effect của layer nằm dưới. Tool sẽ cop
 
 Nếu chọn nhiều layer text thoại, mà layer gốc nằm bên dưới cũng là text thoại thì có thể tự điều chỉnh size hoặc bold/ita theo text bên dưới. Ngoài ra còn có thể căn giữa với text gốc. Có thể set size thoại gốc rồi ấn tool để tool tự tính tăng lên bao nhiêu %
 
-- CHÚ Ý: Tool sẽ chọn layer nằm ngay dưới, nếu dính layer không có effect nằm giữa 2 layer thì sẽ bị theo layer không có effect. Để skip layer đó khóa, ẩn rồi tool sẽ chọn theo layer đúng
+- CHÚ Ý: Tool sẽ chọn layer nằm ngay dưới, nếu dính layer không có effect nằm giữa 2 layer thì sẽ bị theo layer không có effect. Để skip layer đó thì ấn khóa hoặc ẩn layer rồi tool sẽ chọn theo layer đúng
+
+
+························
+
+Vào setting để chỉnh shortcuts và interface layout.
+
