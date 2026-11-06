@@ -1,0 +1,94 @@
+.cs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.cs-run {
+  background: #474747;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 8px;
+  width: 100%;
+  &:hover {
+    background: #585858;
+  }
+  &:active {
+    background: #2c6fd1;
+  }
+}
+.cs-toggle {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.cs-sw {
+  background: #666;
+  border-radius: 9px;
+  height: 18px;
+  position: relative;
+  transition: 0.15s;
+  width: 34px;
+  &::after {
+    background: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    transition: 0.15s;
+    width: 14px;
+  }
+}
+.cs-toggle.on .cs-sw {
+  background: #2c6fd1;
+  &::after {
+    left: 18px;
+  }
+}
+.cs-bases {
+  display: flex;
+  gap: 8px;
+}
+.cs-base {
+  align-items: center;
+  display: flex;
+  flex: 1 1 0;
+  gap: 4px;
+  min-width: 0;
+}
+.cs-base-btn {
+  background: #474747;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+  color: #ddd;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+.cs-base.on .cs-base-btn {
+  background: #2c6fd1;
+  border-color: #2c6fd1;
+  color: #fff;
+}
+.cs-base-input {
+  background: #2b2b2b;
+  border: 1px solid #555;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #eee;
+  flex: 1 1 0;
+  font-size: 12px;
+  min-width: 0;
+  padding: 4px 5px;
+  width: 100%;
+  &:disabled {
+    opacity: 0.4;
+  }
+}

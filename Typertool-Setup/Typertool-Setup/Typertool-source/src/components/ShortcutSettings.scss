@@ -1,0 +1,231 @@
+// Sheet that covers the whole tool below the header
+.ss {
+  overflow-y: auto;
+  background: #323232;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 30;
+}
+.ss-head {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  gap: 8px;
+  justify-content: space-between;
+}
+// the two tabs at the top of the settings: shortcuts | interface layout
+.ss-tabs {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 8px;
+  min-width: 0;
+}
+.ss-tab {
+  background: #474747;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+  color: #ddd;
+  cursor: pointer;
+  flex: 1 1 0;
+  font-size: 12px;
+  min-width: 0;
+  overflow: hidden;
+  padding: 7px 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &.is-on {
+    background: #2c6fd1;
+    border-color: #2c6fd1;
+    color: #fff;
+  }
+}
+.ss-close {
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  color: #ccc;
+  cursor: pointer;
+  padding: 4px;
+  &:hover {
+    background: #505050;
+    color: #fff;
+  }
+}
+.ss-hint {
+  color: #a0a0a0;
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 6px 0 8px;
+}
+.ss-list {
+  background: #2b2b2b;
+  border: 1px solid #4a4a4a;
+  border-radius: 5px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+.ss-row {
+  align-items: center;
+  border-bottom: 1px solid #3a3a3a;
+  display: flex;
+  gap: 6px;
+  padding: 5px 8px;
+  &:last-child {
+    border-bottom: 0;
+  }
+  &.is-conflict .ss-value {
+    color: #ff6b6b;
+  }
+}
+.ss-name {
+  flex: 0 0 80px;
+  font-size: 12px;
+}
+.ss-value {
+  color: #cfe1ff;
+  flex: 1 1 auto;
+  font-size: 12px;
+  min-width: 0;
+  &.is-recording {
+    color: #ffd166;
+  }
+}
+.ss-btn {
+  background: #474747;
+  border: 1px solid #5a5a5a;
+  border-radius: 3px;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 3px 9px;
+  &:hover {
+    background: #585858;
+  }
+}
+.ss-primary {
+  background: #2c6fd1;
+  border-color: #2c6fd1;
+  color: #fff;
+  &:hover {
+    background: #3a7fe0;
+  }
+}
+.ss-foot {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.ss-steps {
+  color: #ccc;
+  font-size: 11px;
+  line-height: 1.45;
+  margin: 6px 0;
+}
+.ss-state {
+  background: #2b2b2b;
+  border-left: 3px solid #777;
+  border-radius: 3px;
+  color: #ccc;
+  font-size: 11px;
+  margin: 0 0 8px;
+  padding: 4px 8px;
+  &.is-active {
+    border-left-color: #4caf50;
+  }
+  &.is-starting {
+    border-left-color: #f0b44c;
+  }
+  &.is-stopped, &.is-unavailable {
+    border-left-color: #ff6b6b;
+  }
+}
+.ss-state.is-active.is-open {
+  border-left-color: #f0b44c;
+}
+.ss-poll {
+  align-items: flex-start;
+  color: #aaa;
+  cursor: pointer;
+  display: flex;
+  font-size: 11px;
+  gap: 6px;
+  margin: 0 0 8px;
+  input {
+    flex: 0 0 auto;
+    margin-top: 2px;
+  }
+}
+// interface layout: one card per panel
+.ll-list {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  overflow-y: auto;
+}
+.ll-card {
+  background: #3a3a3a;
+  border: 1px solid #5a5a5a;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  &.is-hidden {
+    opacity: 0.55;
+  }
+}
+.ll-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.ll-name {
+  font-size: 13px;
+}
+.ll-eye {
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  color: #eee;
+  cursor: pointer;
+  display: flex;
+  padding: 3px 5px;
+  &:hover {
+    background: #505050;
+  }
+}
+.ll-moves {
+  display: flex;
+  gap: 8px;
+}
+.ll-move {
+  align-items: center;
+  background: #3a3a3a;
+  border: 1px solid #6a6a6a;
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+  display: flex;
+  flex: 1 1 0;
+  font-size: 12px;
+  gap: 4px;
+  justify-content: center;
+  padding: 6px 4px;
+  &:hover:not(:disabled) {
+    background: #4c4c4c;
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "typertool",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "test": "node test/testLineBreaker.mjs && node test/testFit.mjs && node test/testHotkeysFit.mjs"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.7.0",
+    "sass": "^1.107.1"
+  }
+}

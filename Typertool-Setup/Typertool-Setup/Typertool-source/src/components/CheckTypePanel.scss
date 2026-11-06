@@ -1,0 +1,85 @@
+// Same look as the other panels: dark list, small toolbar on top
+.ct {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+.ct-bar {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+  padding: 8px 8px 4px;
+}
+.ct-btn {
+  align-items: center;
+  display: flex;
+  flex: 1 1 0;
+  gap: 5px;
+  justify-content: center;
+  min-width: 0;
+  white-space: nowrap;
+}
+.ct-summary {
+  color: #9a9a9a;
+  flex: 0 0 auto;
+  font-size: 11px;
+  overflow: hidden;
+  padding: 0 8px 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ct-note {
+  color: #e0b25a;
+  flex: 0 0 auto;
+  font-size: 11px;
+  padding: 0 8px 6px;
+}
+.ct-empty {
+  align-items: center;
+  color: #9a9a9a;
+  display: flex;
+  flex: 1 1 auto;
+  font-size: 12px;
+  justify-content: center;
+  padding: 8px 18px 14px;
+  text-align: center;
+}
+.ct-list {
+  border-top: 1px solid #4a4a4a;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  user-select: text;
+}
+.ct-row {
+  border-bottom: 1px solid #454545;
+  display: flex;
+  font-size: 12px;
+  line-height: 1.35;
+  &.is-bad {
+    background: #b83a3a;
+    color: #fff;
+    .ct-num {
+      background: #9c2f2f;
+      color: #ffd9d9;
+    }
+  }
+  &.is-missing .ct-text {
+    opacity: 0.45;
+  }
+}
+.ct-num {
+  background: #333;
+  color: #8c8c8c;
+  flex: 0 0 38px;
+  font-size: 11px;
+  padding: 3px 5px 3px 0;
+  text-align: right;
+}
+.ct-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 3px 8px;
+  word-break: break-word;
+}

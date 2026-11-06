@@ -1,0 +1,100 @@
+// Image list styled like Photoshop's layers panel: thumbnail + name per row
+.mip {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  position: relative;
+}
+.mip-list {
+  align-content: start;
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: 1fr 1fr; // two images per line
+  min-height: 0;
+  overflow-y: auto;
+}
+.mip-row {
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+  border-right: 1px solid rgba(128, 128, 128, 0.25);
+  cursor: default;
+  display: flex;
+  gap: 6px;
+  height: 40px;
+  min-width: 0;
+  padding: 0 6px;
+  user-select: none;
+  &:hover {
+    background: rgba(128, 128, 128, 0.15);
+  }
+  &.is-selected {
+    background: #2d8ceb;
+    color: #fff;
+  }
+}
+.mip-thumb {
+  background-color: #fff;
+  background-image:
+    linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%),
+    linear-gradient(45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%);
+  background-position: 0 0, 4px 4px;
+  background-size: 8px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  flex: 0 0 auto;
+  height: 30px;
+  width: 30px;
+  img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+}
+.mip-name {
+  flex: 1 1 auto;
+  font-size: 12px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mip-remove {
+  flex: 0 0 auto;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+}
+.mip-empty {
+  align-items: center;
+  display: flex;
+  grid-column: 1 / -1;
+  font-size: 14px;
+  height: 100%;
+  justify-content: center;
+  margin: 0 24px;
+  min-height: 80px;
+  opacity: 0.6;
+  text-align: center;
+}
+.mip-actions {
+  border-top: 1px solid;
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px;
+}
+.mip-btn {
+  align-items: center;
+  display: flex;
+  flex: 1 1 40%;
+  gap: 5px;
+  justify-content: center;
+  min-width: 0;
+  white-space: nowrap;
+}
+.mip-add {
+  flex-basis: 100%;
+}
