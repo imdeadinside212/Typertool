@@ -1,0 +1,175 @@
+.lb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  min-height: 150px;
+}
+.lb-head {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+.lb-status {
+  color: #8ab4f8;
+  flex: 1 1 40px;
+  font-size: 11px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lb-toggle {
+  align-items: center;
+  background: #474747;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+  color: #ddd;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  gap: 5px;
+  padding: 4px 8px;
+  &.is-on {
+    background: #2c6fd1;
+    border-color: #2c6fd1;
+    color: #fff;
+  }
+}
+.lb-icon {
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  color: #ccc;
+  cursor: pointer;
+  padding: 4px;
+  &:hover:not(:disabled) {
+    background: #505050;
+    color: #fff;
+  }
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+.lb-counts {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(8, 1fr);
+}
+.lb-count {
+  align-items: center;
+  background: #474747;
+  border: 1px solid #5a5a5a;
+  border-radius: 3px;
+  color: #e6e6e6;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  height: 26px;
+  justify-content: center;
+  padding: 0;
+  &:hover:not(:disabled) {
+    background: #585858;
+  }
+  &.is-on {
+    background: #2c6fd1;
+    border-color: #2c6fd1;
+    color: #fff;
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.28;
+  }
+}
+.lb-grid {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 1fr 1fr;
+}
+.lb-card {
+  align-items: center;
+  background: #2b2b2b;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: #f2f2f2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  min-height: 86px;
+  overflow: hidden;
+  padding: 18px 6px 8px;
+  position: relative;
+  &:hover:not(:disabled) {
+    border-color: #8ab4f8;
+  }
+  &.is-current {
+    border-color: #2c6fd1;
+    box-shadow: inset 0 0 0 1px #2c6fd1;
+  }
+  &:disabled {
+    opacity: 0.6;
+  }
+  pre {
+    font-family: inherit;
+    line-height: 1.25;
+    margin: 0;
+    text-align: center;
+    white-space: pre;
+  }
+}
+.lb-badge {
+  color: #8c8c8c;
+  font-size: 10px;
+  left: 6px;
+  position: absolute;
+  top: 4px;
+}
+.lb-lines {
+  background: #3d3d3d;
+  border-radius: 8px;
+  color: #bbb;
+  font-size: 10px;
+  padding: 0 5px;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+}
+.lb-pager {
+  align-items: center;
+  color: #bbb;
+  display: flex;
+  font-size: 11px;
+  gap: 8px;
+  justify-content: center;
+}
+.lb-message {
+  color: #9a9a9a;
+  font-size: 12px;
+  padding: 18px 8px;
+  text-align: center;
+}
+.lb-warn {
+  align-items: center;
+  color: #f0b44c;
+  cursor: help;
+  display: flex;
+  font-size: 11px;
+  gap: 4px;
+  white-space: nowrap;
+}
+// The menu (auto center + the number buttons) stays pinned at the top of the panel while the
+// options below it scroll; the negative margins let it cover the padding of .lb
+.lb-sticky {
+  background: #3a3a3a;
+  border-bottom: 1px solid #4a4a4a;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: -8px -8px 0;
+  padding: 8px 8px 8px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
